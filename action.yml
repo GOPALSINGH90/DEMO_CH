@@ -13,8 +13,7 @@ on:
   workflow_dispatch:
     branches: [ main ]
 
-  schedule:
-    - cron: 0 6 1,15 * *
+
 
 
 jobs:
@@ -32,10 +31,10 @@ jobs:
       - name: scan project source code 
         run: |
           docker run --rm -v $(pwd):/s -v /tmp:/w  casthighlight/hl-agent-cli \
-                                                   --sourceDir /s \
-                                                   --workingDir /w \
-                                                   --tokenAuth ${{ secrets.07318ae5-ad71-4618-85a6-40a8f91e5806}} \
-                                                   --companyId ${{ env.companyId }} \
-                                                   --applicationId ${{ env.applicationId }} \
-                                                   --serverUrl ${{ env.serverUrl }} \
+                                                   sourceDir /s \
+                                                   workingDir /w \
+                                                   tokenAuth ${{ secrets.af7114f9-df8f-4ccc-915b-bf7ce2f5daa7}} \
+                                                   companyId ${{ env.18601 }} \
+                                                   applicationId ${{ env.122700 }} \
+                                                   serverUrl ${{ env.https://rpa.casthighlight.com }} \
                                                    --ignoreDirectories ${{ env.ignoreDirectories }}

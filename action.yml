@@ -39,3 +39,7 @@ jobs:
                                                    applicationId ${{ 122700 }} \
                                                    serverUrl ${{ https://rpa.casthighlight.com }} \
                                                    --ignoreDirectories ${{ env.ignoreDirectories }}
+  # - name: CAST Highlight Scan
+    # You may pin to the exact commit or the version.
+    # uses: MichaelMULLER/highlight-scan-github-action@e847701e3d51663665a273cdc02e0e1e61ee4fa6
+    uses: MichaelMULLER/highlight-scan-github-action@0.0.1
